@@ -1,19 +1,20 @@
 import useUsersTodoCount from "../../hooks/useUsersTodoCount";
 import avatar from "../../assets/user-avatar.svg";
 import { MoonLoader } from 'react-spinners';
+import styles from './Table.module.css';
 
 const Table = () => {
   const { data, error, loading } = useUsersTodoCount();
 
-  if (loading) return <MoonLoader color="#36d7b7" size={50} />;
-  if (error) return <p>Ошибка: {error}</p>;
+  if (loading) return <div className={styles.center}><MoonLoader color="#36d7b7" size={80} /></div>;
+  if (error) return <div className={styles.center}><p className={styles.error}>Ошибка: {error}</p></div>;
 
   return (
-    <div>
-      <table>
+    <div className={styles.tableWrapper}>
+      <table className={styles.table}>
         <thead>
-          <tr>
-            <th>#</th>
+          <tr className={styles.tableHeader}>
+            <th className={styles.indexHead}>#</th>
             <th>username</th>
             <th>to-do count</th>
           </tr>
@@ -21,17 +22,17 @@ const Table = () => {
         <tbody>
           {data.map((user, index) => (
             <tr key={user.id}>
-              <td>{index + 1}</td>
+              <td className={styles.index}>{index + 1}</td>
               <td>
-                <div>
+                <div className={styles.userWrapper}>
                   <img src={avatar} alt="иконка пользователя" />
                   <div>
                     <p>{user.name}</p>
-                    <p>{user.email}</p>
+                    <p className={styles.userEmail}>{user.email}</p>
                   </div>
                 </div>
               </td>
-              <td>{user.todoCount}</td>
+              <td className={styles.todoCount}>{user.todoCount}</td>
             </tr>
           ))}
         </tbody>

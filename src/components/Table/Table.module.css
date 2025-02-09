@@ -1,0 +1,157 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.error {
+  color: #d10505;
+  font-size: 20px;
+}
+
+.tableWrapper {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.2;
+  border-spacing: 0;
+}
+
+.tableHeader {
+  padding: 9px 0 9px;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+th {
+  padding: 0px 12px;
+  white-space: nowrap;
+}
+
+.indexHead {
+  max-width: 47px;
+  height: 32px;
+  padding: 0px;
+  text-align: center;
+}
+
+tbody td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.index {
+  width: 47px;
+  text-align: center;
+}
+
+.userWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 200px;
+  min-height: 80px;
+}
+
+.userWrapper img {
+  width: 40px;
+  height: 40px;
+  margin-left: 8px;
+}
+
+.userEmail {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+}
+
+.todoCount {
+  width: 168px;
+  padding: 0px 12px;
+}
+
+/* адаптив для крутых парней с большими мониторами*/
+@media (min-width: 1920px) {
+  .table {
+    font-size: 20px;
+  }
+
+  .tableHeader {
+    font-size: 16px;
+  }
+
+  .index {
+    width: 57px;
+  }
+
+  .userWrapper {
+    min-height: 100px;
+  }
+
+  .userWrapper img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .userEmail {
+    font-size: 18px;
+  }
+}
+
+/* адаптив на мобилки */
+@media (max-width: 560px) {
+  .table {
+    font-size: 14px;
+  }
+
+  .tableHeader {
+    font-size: 10px;
+  }
+
+  .todoCount {
+    width: 86px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .table {
+    font-size: 12px;
+  }
+
+  .tableHeader {
+    font-size: 8px;
+  }
+
+  .index {
+    width: 37px;
+  }
+
+  .userWrapper {
+    min-height: 56px;
+  }
+
+  .userWrapper img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .userEmail {
+    font-size: 10px;
+  }
+
+  .todoCount {
+    width: 86px;
+    text-align: center;
+  }
+}

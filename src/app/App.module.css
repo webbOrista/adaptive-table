@@ -1,0 +1,19 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 80px;
+  min-width: 320px;
+}
+
+@media (max-width: 560px) {
+  .app {
+    margin: 66px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    margin: 56px 40px;
+  }
+}

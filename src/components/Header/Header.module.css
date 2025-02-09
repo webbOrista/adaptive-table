@@ -1,0 +1,57 @@
+.header {
+  margin-bottom: 48px;
+}
+
+.title {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+/* адаптив для стильных дам с большими мониторами*/
+@media (min-width: 1920px) {
+  .header {
+    margin-bottom: 72px;
+  }
+  .title {
+    font-size: 56px;
+  }
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+/* адаптив на мобилки */
+@media (max-width: 560px) {
+  .header {
+    margin-bottom: 32px;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    margin-bottom: 24px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 12px;
+  }
+}
